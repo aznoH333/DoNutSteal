@@ -17,8 +17,9 @@ export class SearchBarComponent implements OnInit {
   ];
   searchContet = [
     ["Home",""],
-    ["About","/about"],
-    ["Contact","contact"]
+    ["About","about"],
+    ["Contact","contact"],
+    ["Blog","blog"]
   ];
   @ViewChild('searchBar') searchBar : ElementRef;
 

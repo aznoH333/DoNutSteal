@@ -12,7 +12,9 @@ export class HeadComponent implements OnInit {
   links = [
     ["Home",""],
     ["About","/about"],
-    ["Contact","contact"]
+    ["Contact","contact"],
+    ["Blog","blog"]
+
   ];
 
   ngOnInit(): void {

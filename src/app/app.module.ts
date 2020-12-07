@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { HeadComponent } from './head/head.component';
 import {FormsModule} from "@angular/forms";
 import { SearchBarComponent } from './search-bar/search-bar.component';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     ContactComponent,
     HeaderComponent,
     HeadComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
