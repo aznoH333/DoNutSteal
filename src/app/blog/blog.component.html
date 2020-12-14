@@ -1,14 +1,25 @@
 <h2>Blog</h2>
 <div *ngIf="blogs.length < 1"> No blogs availible </div>
 
+<form ngForm>
+  <label>Title</label>
+  <input type="Text" #titleInput><br>
+  <label>Text</label>
+  <input type="Text" #textInput><br>
+  <button (click)="addBlog()"> Add blog </button>
+</form>
+
 <span *ngFor="let i of blogs">
+  <button (click)="setBlogToEdit(i)" *ngIf="blogToEdit == null">Edit</button>
   <h3>{{i[0]}}</h3>
   <p>{{i[1]}}</p>
 </span>
 
-<label>Title</label>
-<input type="Text" #titleInput><br>
-<label>Text</label>
-<input type="Text" #textInput><br>
-<button (click)="addBlog()"> Add blog </button>
-
+<form ngForm *ngIf="blogToEdit != null" (ngSubmit)="editBlog()">
+  <h2>Edit</h2>
+  <label>Title</label>
+  <input type="Text" #editTitleInput><br>
+  <label>Text</label>
+  <input type="Text" #editTextInput><br>
+  <button (click)="editBlog()"> Change blog </button>
+</form>
